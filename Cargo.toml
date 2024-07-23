@@ -1,0 +1,12 @@
+[package]
+name = "enderlook_debug_checked"
+version = "0.1.0"
+edition = "2021"
+authors = ["Enderlook"]
+repository = "https://github.com/Enderlook/Rust-Debug-Checked"
+
+[dependencies]
+
+[features]
+slice_index_methods = []
+cell_leak = []
