@@ -16,7 +16,7 @@ pub trait DcResultOk {
     ///
     /// `self` must be `Ok(T)`.
     ///
-    ///  Failing this produces undefined behavior on Release.
+    /// Failing this produces undefined behavior on Release.
     unsafe fn unwrap_dc_ok(self) -> Self::T;
 
     /// Unwraps the ok content of the option without performing checks on release.
@@ -29,7 +29,7 @@ pub trait DcResultOk {
     ///
     /// `self` must be `Ok(T)`.
     ///
-    ///  Failing this produces undefined behavior on Release.
+    /// Failing this produces undefined behavior on Release.
     unsafe fn expect_dc_ok(self, msg: &str) -> Self::T;
 }
 
@@ -51,7 +51,7 @@ pub trait DcResultErr {
     ///
     /// `self` must be `Err(E)`.
     ///
-    ///  Failing this produces undefined behavior on Release.
+    /// Failing this produces undefined behavior on Release.
     unsafe fn unwrap_dc_err(self) -> Self::E;
 
     /// Unwraps the err content of the option without performing checks on release.
@@ -64,7 +64,7 @@ pub trait DcResultErr {
     ///
     /// `self` must be `Err(E)`.
     ///
-    ///  Failing this produces undefined behavior on Release.
+    /// Failing this produces undefined behavior on Release.
     unsafe fn expect_dc_err(self, msg: &str) -> Self::E;
 }
 
