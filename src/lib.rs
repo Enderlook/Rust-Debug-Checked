@@ -61,6 +61,8 @@ pub unsafe fn replace_with_dc<T>(reference: &mut T, closure: impl FnOnce(T) -> T
 #[cfg(not(debug_assertions))]
 #[inline(always)]
 pub unsafe fn replace_with_dc<T>(reference: &mut T, closure: impl FnOnce(T) -> T) {
+    use std::{panic, ptr};
+
     let old_value = ptr::read(reference);
     let new_value = closure(old_value);
     ptr::write(reference, new_value);
